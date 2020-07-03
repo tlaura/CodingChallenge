@@ -23,6 +23,13 @@ public class SavingsAccountBalanceTest {
     }
 
     @Test
+    public void setBalance_sumHigherThanTaxFreeLimit_taxRate2() {
+        double balance = savingsAccountBalance.balance(25000, 2, 20000, 2, 2);
+        Assertions.assertEquals(25800.0, balance);
+    }
+
+
+    @Test
     public void setBalance_sumChangesHigherThanTaxFreeLimit() {
         double balance = savingsAccountBalance.balance(19800, 2, 20000, 1, 2);
         Assertions.assertEquals(20597.96, balance);

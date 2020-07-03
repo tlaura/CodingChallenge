@@ -6,7 +6,7 @@ public class SavingsAccountBalance {
             double interest = (balance * interestRate) / 100 ;
             double monthlyTax = 0;
             if(balance > taxFreeLimit) {
-                monthlyTax = (balance - taxFreeLimit) / 100;
+                monthlyTax = ((balance - taxFreeLimit) * taxRate) / 100 ;
             }
             balance += interest - monthlyTax;
         }
