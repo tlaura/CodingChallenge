@@ -1,22 +1,6 @@
-import lombok.Getter;
+import util.Tuple;
 
 public class LongestSequence {
-
-    @Getter
-    class Tuple {
-        private char character;
-        private int length;
-
-        public Tuple(char character, int length) {
-            this.character = character;
-            this.length = length;
-        }
-
-        @Override
-        public String toString() {
-            return "( " + character + " - " + length + " )";
-        }
-    }
 
     public Tuple longestSequence(String letters) {
         letters = letters.toLowerCase();
